@@ -90,8 +90,9 @@ void graph::DFS_search(vertex*vert,int index){//melakukan penelusuran terhadap s
     }
 }
 
-int main(){
-    graph *a=new graph();
+int main(){//memanggil semua method yang telah dibuat pada class graph dan class vertex
+    graph *a=new graph();//membuat objek dari class graph
+    //memanggil method Addvertex(char a)
     a->Addvertex('A');//0
     a->Addvertex('B');//1
     a->Addvertex('C');//2
@@ -104,6 +105,7 @@ int main(){
     a->Addvertex('J');//9
     a->Addvertex('K');//10
     
+    //memanggil method addedge(int st,int end)
     a->addedge(0,1);//AB
     a->addedge(0,2);//AC    
     a->addedge(1,3);//BD
@@ -115,6 +117,7 @@ int main(){
     a->addedge(4,9);//EJ
     a->addedge(5,10);//FK
 
+    //memanggil method DFS()
     a->DFS();
     cout<<endl;
     cout<<endl;
