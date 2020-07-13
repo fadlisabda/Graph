@@ -76,6 +76,20 @@ void graph::DFS(){//untuk menjalankan algoritma DFS
     }
 }
 
+void graph::DFS_search(vertex*vert,int index){//melakukan penelusuran terhadap seluruh vertex yang berdekatan dengannya
+    //untuk menelusuri seluruh rangkaian vertex yang ada
+    vert->condition=true;
+    display(index);
+    for (int i = 0; i < nvert; i++)//sampai variabel boolean condition pada seluruh vertex bernilai true artinya vertex tersebut telah dilewati atau ditelusuri
+    {
+        if((add_jacent[index][i]==1)&&(addvertex[i]->condition == false))
+        {
+            addvertex[i]->parent=vert;
+            DFS_search(addvertex[i],i);//melakukan rekursif
+        }
+    }
+}
+
 
 int main(){
 
