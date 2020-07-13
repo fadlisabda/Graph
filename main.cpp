@@ -59,6 +59,24 @@ void graph::display(int v){//menampilkan vertex dari hasil penelusuran algoritma
     cout<<addvertex[v]->lab<<" ";
 }
 
+void graph::DFS(){//untuk menjalankan algoritma DFS
+    //mengondisikan semua vertex ke dalam keadaan awal(belum ditelusuri)
+    cout<<"Pencarian jalur dengan metode DFS :"<<endl;
+    for (int i = 0; i < nvert; i++)
+    {
+        addvertex[i]->condition=false;//kondisi
+        addvertex[i]->parent=NULL;//keadaan awal
+    }
+    for (int j = 0; j < nvert; j++)//pemanggilan ini dilakukan secara terus-menerus mulai dari vertex awal sampai vertex terakhir
+    {
+        if (addvertex[j]->condition == false)//jika vertex belum ditelusuri
+        {
+            DFS_search(addvertex[j],j);//proses penelusuran dimulai dengan memanggil method 
+        }
+    }
+}
+
+
 int main(){
 
     return 0;
