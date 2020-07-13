@@ -14,9 +14,9 @@ class vertex{//akan digunakan sebagai representasi objek vertex atau node didala
 };
 
 class graph{//berfungsi untuk merepresentasikan fungsi-fungsi yang dibuat untuk membangun sebuah DFS graph.
-    public://diakses secara public
-        vertex** addvertex;//variabel ini akan menjadi objek untuk tiap vertex yang dibuat didalam graph
-        int **add_jacent;//menghubungkan dua vertex yang saling terhubung
+    public://diakses secara public.
+        vertex** addvertex;//variabel ini akan menjadi objek untuk tiap vertex yang dibuat didalam graph.
+        int **add_jacent;//menghubungkan dua vertex yang saling terhubung.
         void Addvertex(char a);//tiap vertex yang dibuat akan diinputkan difungsi main().
         void addedge(int st,int end);
         void DFS();
@@ -37,13 +37,20 @@ class graph{//berfungsi untuk merepresentasikan fungsi-fungsi yang dibuat untuk 
 
         private:
             void display(int v);
-            int nvert;//untuk mengetahui jumlah vertex yang akan dibuat
+            int nvert;//untuk mengetahui jumlah vertex yang akan dibuat.
             void DFS_search(vertex *v,int j);
 };
 
 void graph::Addvertex(char a){//membuat vertex yang diinginkan.
     addvertex[nvert++]=new vertex(a);//menginputkan vertex char a kedalam array vertex **Addvertex.
-    //int nvert++ akan menunjukkan indeks dari array tersebut
+    //int nvert++ akan menunjukkan indeks dari array tersebut.
+}
+
+void graph::addedge(int st,int end){//menghubungkan vertex-vertex yang ada berdasarkan indeksnya.
+    //nilai array dibuat sama antara vertex asal dan vertex tujuan.
+    //hal ini dikarenakan graph yang dibuat adalah blind search
+    add_jacent[st][end]=1;
+    add_jacent[end][st]=1;
 }
 
 int main(){
