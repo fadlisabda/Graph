@@ -2,6 +2,8 @@
 #include <iostream>
 using namespace std;
 
+
+
 class vertex{//akan digunakan sebagai representasi objek vertex atau node didalam sebuah graph.
     public:
         char lab;//karakter nama dari vertex yang bersangkutan.
@@ -28,7 +30,7 @@ class graph{//berfungsi untuk merepresentasikan fungsi-fungsi yang dibuat untuk 
             for (int i = 0; i < 20; i++)
             {
                 add_jacent[i]=new int[20];
-                for (int j = 0; i < 20; i++)
+                for (int j = 0; j < 20; j++)
                 {
                     add_jacent[i][j]=0;
                 }
