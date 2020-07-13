@@ -48,9 +48,15 @@ void graph::Addvertex(char a){//membuat vertex yang diinginkan.
 
 void graph::addedge(int st,int end){//menghubungkan vertex-vertex yang ada berdasarkan indeksnya.
     //nilai array dibuat sama antara vertex asal dan vertex tujuan.
-    //hal ini dikarenakan graph yang dibuat adalah blind search
+    //hal ini dikarenakan graph yang dibuat adalah blind search.
     add_jacent[st][end]=1;
     add_jacent[end][st]=1;
+}
+
+void graph::display(int v){//menampilkan vertex dari hasil penelusuran algoritma DFS yang dibuat.
+    //menampilkan vertex yang diinginkan dengan memanggil variabel addvertex
+    //dengan menggunakan nilai integer dari argument inputan
+    cout<<addvertex[v]->lab<<" ";
 }
 
 int main(){
