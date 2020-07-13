@@ -90,8 +90,34 @@ void graph::DFS_search(vertex*vert,int index){//melakukan penelusuran terhadap s
     }
 }
 
-
 int main(){
+    graph *a=new graph();
+    a->Addvertex('A');//0
+    a->Addvertex('B');//1
+    a->Addvertex('C');//2
+    a->Addvertex('D');//3
+    a->Addvertex('E');//4
+    a->Addvertex('F');//5
+    a->Addvertex('G');//6
+    a->Addvertex('H');//7
+    a->Addvertex('I');//8
+    a->Addvertex('J');//9
+    a->Addvertex('K');//10
+    
+    a->addedge(0,1);//AB
+    a->addedge(0,2);//AC    
+    a->addedge(1,3);//BD
+    a->addedge(1,4);//BE
+    a->addedge(2,5);//CF
+    a->addedge(2,6);//CG
+    a->addedge(3,7);//DH
+    a->addedge(3,8);//DI
+    a->addedge(4,9);//EJ
+    a->addedge(5,10);//FK
 
+    a->DFS();
+    cout<<endl;
+    cout<<endl;
+    cout<<"Hasil Pencarian DFS"<<endl;
     return 0;
 }
