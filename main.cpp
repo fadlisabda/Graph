@@ -17,7 +17,6 @@ class vertex{//akan digunakan sebagai representasi objek vertex atau node didala
         vertex(char l){//nantinya akan digunakan ketika tiap vertex dibuat di dalam class graph.
             lab=l;
         }
-
 };
 
 class graph{//berfungsi untuk merepresentasikan fungsi-fungsi yang dibuat untuk membangun sebuah DFS graph.
